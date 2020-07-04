@@ -1,0 +1,16 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+
+
+    <h1>{{object.title}}</h1>  By: {{object.author}}
+<a href="{% url 'updates_post' object.pk %}">(Edit)</a>
+
+<br/> {{object.body}}
+    <br/>
+    <br/>
+    <a href="{% url 'home'%}" class="btn btn-secondary"> Go Back</a>
+
+{% endblock %}
+
